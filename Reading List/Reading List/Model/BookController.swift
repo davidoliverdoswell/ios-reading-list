@@ -46,12 +46,27 @@ class BookController {
         }
     }
     
-    func createBook() {
-        
+    func createBook(book: Book) {
+        books.append(book)
+        saveToPersistentStore()
     }
     
-    func deleteBook() {
-        
+    func deleteBook(book: Book) {
+        guard let index = books.index(of: book) else { return }
+        books.remove(at: index)
+        saveToPersistentStore()
+    }
+    
+    func updateHasBeenRead(for book: Book) {
+        var readBooks: [Book] {
+            return books.filter( { $0.hasBeenRead } )
+        }
+    }
+    
+    func updateHasNotBeenRead(for book: Book) {
+        var unreadBooks: [Book] {
+            return books.filter( { $0.hasBeenRead == false } )
+        }
     }
     
     
