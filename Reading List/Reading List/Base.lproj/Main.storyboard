@@ -49,9 +49,9 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="cellLabel" destination="leP-Dr-03J" id="H3W-oN-h2x"/>
-                                    <outlet property="uncheckedButton" destination="b8N-Qh-sRQ" id="k7F-nz-TAu"/>
-                                    <segue destination="O5E-mU-sov" kind="show" identifier="show" id="j5S-vn-P4t"/>
+                                    <outlet property="title" destination="leP-Dr-03J" id="mRQ-lF-ouB"/>
+                                    <outlet property="uncheckedOutlet" destination="b8N-Qh-sRQ" id="MSw-h2-EfJ"/>
+                                    <segue destination="O5E-mU-sov" kind="show" identifier="showBook" id="j5S-vn-P4t"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -72,20 +72,55 @@
             </objects>
             <point key="canvasLocation" x="628" y="98.50074962518741"/>
         </scene>
-        <!--View Controller-->
+        <!--Title-->
         <scene sceneID="ZJP-z5-H6J">
             <objects>
-                <viewController id="O5E-mU-sov" sceneMemberID="viewController">
+                <viewController id="O5E-mU-sov" customClass="BookDetailViewController" customModule="Reading_List" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Yox-OQ-Fli">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eTk-Bb-5qc">
+                                <rect key="frame" x="16" y="89" width="343" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="44e-nk-Kj7">
+                                <rect key="frame" x="16" y="127" width="343" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="eTk-Bb-5qc" firstAttribute="top" secondItem="wkw-uJ-sXq" secondAttribute="top" constant="25" id="50u-Hh-PwA"/>
+                            <constraint firstItem="wkw-uJ-sXq" firstAttribute="trailing" secondItem="44e-nk-Kj7" secondAttribute="trailing" constant="16" id="BoW-6v-gCk"/>
+                            <constraint firstItem="wkw-uJ-sXq" firstAttribute="trailing" secondItem="eTk-Bb-5qc" secondAttribute="trailing" constant="16" id="atD-sk-4Gr"/>
+                            <constraint firstItem="eTk-Bb-5qc" firstAttribute="leading" secondItem="wkw-uJ-sXq" secondAttribute="leading" constant="16" id="iMU-mf-Wi0"/>
+                            <constraint firstItem="wkw-uJ-sXq" firstAttribute="bottom" secondItem="44e-nk-Kj7" secondAttribute="bottom" constant="412" id="p2M-VK-qhW"/>
+                            <constraint firstItem="44e-nk-Kj7" firstAttribute="top" secondItem="eTk-Bb-5qc" secondAttribute="bottom" constant="8" id="t1f-YS-ytT"/>
+                            <constraint firstItem="44e-nk-Kj7" firstAttribute="leading" secondItem="wkw-uJ-sXq" secondAttribute="leading" constant="16" id="yKh-v1-FGC"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="wkw-uJ-sXq"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Title" id="cQu-Mg-CVz">
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="Yzm-4f-ynb">
+                            <connections>
+                                <action selector="saveButton:" destination="O5E-mU-sov" id="zRT-A1-PkP"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="reasonToReadLabel" destination="44e-nk-Kj7" id="Ucx-2E-I7J"/>
+                        <outlet property="titleLabel" destination="eTk-Bb-5qc" id="XIn-zJ-Hn9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3nK-c8-8MJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1338" y="99"/>
+            <point key="canvasLocation" x="1336.8" y="98.50074962518741"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="6op-7G-E8Y">

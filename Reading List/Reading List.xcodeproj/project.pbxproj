@@ -16,6 +16,8 @@
 		A6FF07652110EE7000ADC56A /* BookController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6FF07642110EE7000ADC56A /* BookController.swift */; };
 		A6FF076A2111034F00ADC56A /* ReadingListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6FF07692111034F00ADC56A /* ReadingListTableViewController.swift */; };
 		A6FF076E211103CD00ADC56A /* BookTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6FF076D211103CD00ADC56A /* BookTableViewCell.swift */; };
+		A6FF0770211107B800ADC56A /* BookTableViewCellDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6FF076F211107B800ADC56A /* BookTableViewCellDelegate.swift */; };
+		A6FF0772211115EB00ADC56A /* BookDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6FF0771211115EB00ADC56A /* BookDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		A6FF07642110EE7000ADC56A /* BookController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookController.swift; sourceTree = "<group>"; };
 		A6FF07692111034F00ADC56A /* ReadingListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadingListTableViewController.swift; sourceTree = "<group>"; };
 		A6FF076D211103CD00ADC56A /* BookTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookTableViewCell.swift; sourceTree = "<group>"; };
+		A6FF076F211107B800ADC56A /* BookTableViewCellDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookTableViewCellDelegate.swift; sourceTree = "<group>"; };
+		A6FF0771211115EB00ADC56A /* BookDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +83,7 @@
 			children = (
 				A6FF07622110EE6100ADC56A /* Book.swift */,
 				A6FF07642110EE7000ADC56A /* BookController.swift */,
+				A6FF076F211107B800ADC56A /* BookTableViewCellDelegate.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -95,6 +100,7 @@
 		A6FF07682110EE9F00ADC56A /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				A6FF0771211115EB00ADC56A /* BookDetailViewController.swift */,
 				A6FF07692111034F00ADC56A /* ReadingListTableViewController.swift */,
 			);
 			path = Controllers;
@@ -176,6 +182,8 @@
 				A6FF076E211103CD00ADC56A /* BookTableViewCell.swift in Sources */,
 				466941692110E22A00E7FF73 /* AppDelegate.swift in Sources */,
 				A6FF07652110EE7000ADC56A /* BookController.swift in Sources */,
+				A6FF0770211107B800ADC56A /* BookTableViewCellDelegate.swift in Sources */,
+				A6FF0772211115EB00ADC56A /* BookDetailViewController.swift in Sources */,
 				A6FF07632110EE6100ADC56A /* Book.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
